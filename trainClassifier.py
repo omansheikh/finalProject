@@ -5,8 +5,8 @@ from sklearn.ensemble import RandomForestRegressor
 import pickle
 
 # Load data
-print("Loading data from crop_production.csv...")
-df = pd.read_csv('crop_production.csv')
+print("Loading data from agricultural_data.csv...")
+df = pd.read_csv('agricultural_data.csv')
 print(f"Loaded {len(df)} rows of data")
 
 """
@@ -83,10 +83,10 @@ print("Model training completed")
 
 # Save model and encoder
 print("\nSaving model and encoder...")
-with open('crop_yield_model.pkl', 'wb') as f:
+with open('crop_yield_model-1.pkl', 'wb') as f:
     pickle.dump(model, f)
 
-with open('oneHotEncoder.pkl', 'wb') as f:
+with open('oneHotEncoder-1.pkl', 'wb') as f:
     pickle.dump(ohe, f)
 
 print("\nModel and encoder saved successfully!")
